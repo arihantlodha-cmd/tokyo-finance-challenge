@@ -104,7 +104,7 @@ export default function HomePage() {
         {/* Split: description + CTAs / countdown */}
         <div className="grid-hero">
           <div>
-            <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.8, marginBottom: 36, maxWidth: 420 }}>
+            <p style={{ fontSize: 18, color: "var(--text-2)", lineHeight: 1.85, marginBottom: 36, maxWidth: 420 }}>
               {comp.description}
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -125,7 +125,7 @@ export default function HomePage() {
           </div>
 
           <div>
-            <div style={{ ...mono, fontSize: 9, letterSpacing: "0.14em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 14 }}>
+            <div style={{ ...mono, fontSize: 11, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 14 }}>
               Submission countdown
             </div>
             <CountdownTimer deadline={comp.submissionDeadline + "T23:59:59"} />
@@ -141,10 +141,10 @@ export default function HomePage() {
             { label: "Reg. closes",           value: formatDate(comp.registrationClose) },
           ].map((item) => (
             <div key={item.label} className="stat-cell">
-              <div style={{ ...mono, fontSize: 9, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 10 }}>
+              <div style={{ ...mono, fontSize: 11, letterSpacing: "0.1em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 10 }}>
                 {item.label}
               </div>
-              <div style={{ ...mono, fontSize: 15, fontWeight: 700, color: "#F0F0F0", letterSpacing: "-0.01em" }}>
+              <div style={{ ...mono, fontSize: 17, fontWeight: 700, color: "#F0F0F0", letterSpacing: "-0.01em" }}>
                 {item.value}
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
       {/* ── SOCIAL PROOF: COUNTRIES ── */}
       <section style={{ borderTop: "1px solid var(--border)", padding: "40px 24px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-          <div style={{ ...mono, fontSize: 9, letterSpacing: "0.14em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 20 }}>
+          <div style={{ ...mono, fontSize: 11, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 20 }}>
             Participants from
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
@@ -180,7 +180,7 @@ export default function HomePage() {
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <div style={{ display: "flex", gap: 32, flexWrap: "wrap", alignItems: "center" }}>
             <div style={{ flex: 1, minWidth: 260 }}>
-              <div style={{ ...mono, fontSize: 9, letterSpacing: "0.14em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 16 }}>
+              <div style={{ ...mono, fontSize: 11, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 16 }}>
                 The pitch
               </div>
               <p style={{ fontSize: 22, color: "#F0F0F0", lineHeight: 1.4, letterSpacing: "-0.02em", fontWeight: 600 }}>
@@ -190,7 +190,7 @@ export default function HomePage() {
               </p>
             </div>
             <div style={{ flex: 2, minWidth: 260 }}>
-              <p style={{ fontSize: 14, color: "var(--text-2)", lineHeight: 1.85 }}>
+              <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.85 }}>
                 Elite summer finance programs cost thousands of dollars and require connections to access.
                 IFC is completely free, open to every high school student globally, and gives you the same
                 real-world experience — stock pitches, case competitions, and judging by finance professionals.
@@ -241,13 +241,13 @@ export default function HomePage() {
                 borderBottom: "1px solid var(--border)",
                 borderLeft: i === 0 ? "1px solid var(--border)" : "none",
               }}>
-                <div style={{ ...mono, fontSize: 10, color: "var(--text-3)", letterSpacing: "0.1em", marginBottom: 20 }}>
+                <div style={{ ...mono, fontSize: 12, color: "var(--text-3)", letterSpacing: "0.08em", marginBottom: 20 }}>
                   {f.num}
                 </div>
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, marginBottom: 10, letterSpacing: "-0.02em" }}>
                   {f.title}
                 </div>
-                <p style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.7 }}>{f.body}</p>
+                <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.75 }}>{f.body}</p>
               </div>
             ))}
           </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
               </h2>
             </div>
             <div>
-              <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.85 }}>
+              <p style={{ fontSize: 17, color: "var(--text-2)", lineHeight: 1.85 }}>
                 Every month, a different challenge — stock pitches, economics quizzes, case competitions. Free to enter, open to all high school students worldwide. AI tools welcome. No finance background needed.
               </p>
             </div>
@@ -292,13 +292,13 @@ export default function HomePage() {
                 borderBottom: "1px solid var(--border)",
                 borderLeft: i === 0 ? "1px solid var(--border)" : "none",
               }}>
-                <div style={{ ...mono, fontSize: 10, color: "var(--text-3)", letterSpacing: "0.1em", marginBottom: 20 }}>
+                <div style={{ ...mono, fontSize: 12, color: "var(--text-3)", letterSpacing: "0.08em", marginBottom: 20 }}>
                   {f.num}
                 </div>
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, marginBottom: 10, letterSpacing: "-0.02em" }}>
                   {f.title}
                 </div>
-                <p style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.7 }}>{f.body}</p>
+                <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.75 }}>{f.body}</p>
               </div>
             ))}
           </div>
@@ -319,13 +319,13 @@ export default function HomePage() {
                   border: "1px solid var(--border)",
                   borderLeft: i > 0 ? "none" : "1px solid var(--border)",
                 }}>
-                  <div style={{ ...mono, fontSize: 10, color: "var(--text-3)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 14 }}>
+                  <div style={{ ...mono, fontSize: 12, color: "var(--text-3)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>
                     {typeLabel(c.type)}
                   </div>
                   <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 16, marginBottom: 10, letterSpacing: "-0.02em" }}>
                     {c.title}
                   </div>
-                  <p style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.65, marginBottom: 16 }}>{c.description}</p>
+                  <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.7, marginBottom: 16 }}>{c.description}</p>
                   <div style={{ ...mono, fontSize: 11, color: "var(--text-3)" }}>
                     Opens {formatDate(c.registrationOpen)} · {c.prizes.first} first
                   </div>
@@ -361,7 +361,7 @@ export default function HomePage() {
               <div key={item.title} className="grid-why-row">
                 <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.1em", paddingTop: 2 }}>{item.n}</div>
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, letterSpacing: "-0.01em", lineHeight: 1.3 }}>{item.title}</div>
-                <p style={{ fontSize: 14, color: "var(--text-2)", lineHeight: 1.75 }}>{item.body}</p>
+                <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.8 }}>{item.body}</p>
               </div>
             ))}
             <div style={{ borderTop: "1px solid var(--border)" }} />

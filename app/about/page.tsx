@@ -37,13 +37,13 @@ export default function AboutPage() {
             Real finance experience.<br />Free for every student.
           </h1>
           <div style={{ maxWidth: 620 }}>
-            <p style={{ color: "#999", fontSize: 15, lineHeight: 1.8, marginBottom: 18 }}>
+            <p style={{ color: "#999", fontSize: 17, lineHeight: 1.85, marginBottom: 18 }}>
               International Finance Challenge was created to close the gap between classroom finance education and the real world. High school students everywhere — regardless of school, background, or resources — deserve access to the kind of competitive, practical experience that builds genuine finance skills.
             </p>
-            <p style={{ color: "#aaa", fontSize: 15, lineHeight: 1.8, marginBottom: 18 }}>
+            <p style={{ color: "#aaa", fontSize: 17, lineHeight: 1.85, marginBottom: 18 }}>
               Through monthly competitions — stock pitches, economics quizzes, case competitions — we give students a structured way to apply what they learn, get feedback from industry professionals, and build a track record before university.
             </p>
-            <p style={{ color: "#bbb", fontSize: 15, lineHeight: 1.8 }}>
+            <p style={{ color: "#bbb", fontSize: 17, lineHeight: 1.85 }}>
               Our competitions are modeled after real-world processes: equity research, consulting case work, economics analysis. The skills you build here are the same ones that matter at KWHS, IEO, and eventually in your career.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                   <Check size={14} style={{ color: "#aaa", marginTop: 3, flexShrink: 0 }} />
                   <h3 style={{ color: "#333", fontWeight: 600, fontSize: 15 }}>{v.title}</h3>
                 </div>
-                <p style={{ color: "#aaa", fontSize: 13, lineHeight: 1.7, paddingLeft: 24 }}>{v.body}</p>
+                <p style={{ color: "#aaa", fontSize: 15, lineHeight: 1.75, paddingLeft: 24 }}>{v.body}</p>
               </div>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 </div>
                 <div style={{ color: "#222", fontWeight: 700, fontSize: 15, marginBottom: 2 }}>{person.name}</div>
                 <div style={{ color: "#bbb", fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 12 }}>{person.role}</div>
-                <p style={{ color: "#aaa", fontSize: 13, lineHeight: 1.65 }}>{person.bio}</p>
+                <p style={{ color: "#aaa", fontSize: 15, lineHeight: 1.7 }}>{person.bio}</p>
               </div>
             ))}
           </div>
@@ -103,11 +103,11 @@ export default function AboutPage() {
         <section style={{ padding: "64px 0" }}>
           <div style={S.label}>Judges</div>
           <h2 style={{ ...S.h2, marginTop: 16, marginBottom: 16 }}>Competition judges</h2>
-          <p style={{ color: "#aaa", fontSize: 14, marginBottom: 32 }}>
+          <p style={{ color: "#aaa", fontSize: 16, marginBottom: 32 }}>
             Judges are finance professionals selected based on each competition type. They are announced before each competition round begins.
           </p>
           <div style={{ border: "1px solid rgba(0,0,0,0.07)", borderRadius: 8, padding: "24px 28px", background: "#f7f7f7" }}>
-            <p style={{ color: "#bbb", fontSize: 14, lineHeight: 1.7 }}>
+            <p style={{ color: "#bbb", fontSize: 16, lineHeight: 1.75 }}>
               If you are a finance professional (analyst, fund manager, consultant, or academic) interested in judging, email us at{" "}
               <a href="mailto:arihant97@smis.ac.jp" style={{ color: "#999", textDecoration: "none" }}>arihant97@smis.ac.jp</a>.
             </p>
@@ -126,14 +126,14 @@ export default function AboutPage() {
               <a href="mailto:arihant97@smis.ac.jp" style={{ display: "block", color: "#777", fontSize: 15, textDecoration: "none", marginTop: 10 }}>
                 arihant97@smis.ac.jp
               </a>
-              <p style={{ color: "#bbb", fontSize: 13, marginTop: 8 }}>We reply within 24 hours.</p>
+              <p style={{ color: "#bbb", fontSize: 15, marginTop: 8 }}>We reply within 24 hours.</p>
             </div>
             <div style={{ padding: "28px 28px", background: "#f7f7f7" }}>
               <div style={S.label}>Judging &amp; partnerships</div>
               <a href="mailto:arihant97@smis.ac.jp" style={{ display: "block", color: "#777", fontSize: 15, textDecoration: "none", marginTop: 10 }}>
                 arihant97@smis.ac.jp
               </a>
-              <p style={{ color: "#bbb", fontSize: 13, marginTop: 8 }}>Interested in judging or partnering?</p>
+              <p style={{ color: "#bbb", fontSize: 15, marginTop: 8 }}>Interested in judging or partnering?</p>
             </div>
           </div>
         </section>
