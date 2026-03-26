@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About | Tokyo Finance Challenge",
-  description: "About Tokyo Finance Challenge and our mission to bring real finance competition to high school students.",
+  title: "About | International Finance Challenge",
+  description: "About International Finance Challenge and our mission to bring real finance competition to high school students.",
 };
 
 const S = {
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </h1>
           <div style={{ maxWidth: 620 }}>
             <p style={{ color: "#999", fontSize: 15, lineHeight: 1.8, marginBottom: 18 }}>
-              Tokyo Finance Challenge was created to close the gap between classroom finance education and the real world. High school students everywhere — regardless of school, background, or resources — deserve access to the kind of competitive, practical experience that builds genuine finance skills.
+              International Finance Challenge was created to close the gap between classroom finance education and the real world. High school students everywhere — regardless of school, background, or resources — deserve access to the kind of competitive, practical experience that builds genuine finance skills.
             </p>
             <p style={{ color: "#aaa", fontSize: 15, lineHeight: 1.8, marginBottom: 18 }}>
               Through monthly competitions — stock pitches, economics quizzes, case competitions — we give students a structured way to apply what they learn, get feedback from industry professionals, and build a track record before university.
@@ -78,7 +78,7 @@ export default function AboutPage() {
         {/* Team */}
         <section style={{ padding: "64px 0" }}>
           <div style={S.label}>Team</div>
-          <h2 style={{ ...S.h2, marginTop: 16, marginBottom: 40 }}>Who runs Tokyo Finance Challenge</h2>
+          <h2 style={{ ...S.h2, marginTop: 16, marginBottom: 40 }}>Who runs International Finance Challenge</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 1, border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, overflow: "hidden" }}>
             {team.map((person, i) => (
               <div key={person.name} style={{

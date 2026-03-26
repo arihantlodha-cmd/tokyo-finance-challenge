@@ -16,9 +16,9 @@ export default function Footer() {
                 background: "#F0F0F0",
                 display: "flex", alignItems: "center", justifyContent: "center",
               }}>
-                <span style={{ fontSize: 10, fontWeight: 900, color: "#0C0C0C", letterSpacing: "0.04em", fontFamily: "var(--font-mono)" }}>TFC</span>
+                <span style={{ fontSize: 10, fontWeight: 900, color: "#0C0C0C", letterSpacing: "0.04em", fontFamily: "var(--font-mono)" }}>IFC</span>
               </div>
-              <span style={{ fontSize: 13, fontWeight: 600, color: "#F0F0F0" }}>Tokyo Finance Challenge</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: "#F0F0F0" }}>International Finance Challenge</span>
             </div>
             <p style={{ color: "var(--text-3)", fontSize: 13, lineHeight: 1.75, maxWidth: 280 }}>
               Monthly finance competitions for high school students. Free to enter, real prizes.
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: "1px solid var(--border)", paddingTop: 20, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-          <p style={{ color: "var(--text-3)", fontSize: 11, fontFamily: "var(--font-mono)" }}>© 2026 Tokyo Finance Challenge.</p>
+          <p style={{ color: "var(--text-3)", fontSize: 11, fontFamily: "var(--font-mono)" }}>© 2026 International Finance Challenge.</p>
           <p style={{ color: "var(--text-3)", fontSize: 11, fontFamily: "var(--font-mono)" }}>Monthly competitions for high school students.</p>
         </div>
       </div>

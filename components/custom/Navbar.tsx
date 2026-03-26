@@ -37,9 +37,9 @@ export default function Navbar() {
             background: "#F0F0F0",
             display: "flex", alignItems: "center", justifyContent: "center",
           }}>
-            <span style={{ fontSize: 10, fontWeight: 900, color: "#0C0C0C", letterSpacing: "0.04em", fontFamily: "var(--font-mono)" }}>TFC</span>
+            <span style={{ fontSize: 10, fontWeight: 900, color: "#0C0C0C", letterSpacing: "0.04em", fontFamily: "var(--font-mono)" }}>IFC</span>
           </div>
-          <span style={{ fontSize: 14, fontWeight: 600, color: "#F0F0F0", letterSpacing: "-0.02em" }}>Tokyo Finance Challenge</span>
+          <span style={{ fontSize: 14, fontWeight: 600, color: "#F0F0F0", letterSpacing: "-0.02em" }}>International Finance Challenge</span>
         </Link>
 
         {/* Desktop */}

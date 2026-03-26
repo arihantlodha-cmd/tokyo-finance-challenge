@@ -5,10 +5,10 @@ import { competitions, formatDate, typeLabel } from "@/lib/data";
 import CountdownTimer from "@/components/custom/CountdownTimer";
 
 export const metadata: Metadata = {
-  title: "Tokyo Finance Challenge — Monthly Finance Competitions for High School Students",
+  title: "International Finance Challenge — Monthly Finance Competitions for High School Students",
   description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 37 participants from 7 countries. Real cash prizes.",
   openGraph: {
-    title: "Tokyo Finance Challenge",
+    title: "International Finance Challenge",
     description: "Free international finance competition for high school students. 37 participants from 7 countries.",
   },
 };
@@ -192,7 +192,7 @@ export default function HomePage() {
             <div style={{ flex: 2, minWidth: 260 }}>
               <p style={{ fontSize: 14, color: "var(--text-2)", lineHeight: 1.85 }}>
                 Elite summer finance programs cost thousands of dollars and require connections to access.
-                TFC is completely free, open to every high school student globally, and gives you the same
+                IFC is completely free, open to every high school student globally, and gives you the same
                 real-world experience — stock pitches, case competitions, and judging by finance professionals.
               </p>
             </div>
