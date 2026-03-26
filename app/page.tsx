@@ -153,22 +153,26 @@ export default function HomePage() {
       </section>
 
       {/* ── SOCIAL PROOF: COUNTRIES ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "40px 24px" }}>
-        <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-          <div style={{ ...mono, fontSize: 11, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 20 }}>
+      <section style={{ borderTop: "1px solid var(--border)", padding: "40px 0" }}>
+        <div style={{ maxWidth: 1080, margin: "0 auto", paddingLeft: 24, marginBottom: 20 }}>
+          <div style={{ ...mono, fontSize: 11, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase" }}>
             Participants from
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-            {COUNTRIES.map(c => (
-              <div key={c.name} style={{
+        </div>
+        <div className="marquee-wrap">
+          <div className="marquee-track">
+            {[...COUNTRIES, ...COUNTRIES].map((c, i) => (
+              <div key={i} style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
-                padding: "6px 14px",
+                padding: "7px 18px",
                 border: "1px solid var(--border)",
                 borderRadius: 2,
                 background: "var(--bg-raised)",
+                marginRight: 12,
+                flexShrink: 0,
               }}>
-                <span style={{ fontSize: 16 }}>{c.flag}</span>
-                <span style={{ ...mono, fontSize: 11, color: "var(--text-2)", letterSpacing: "0.04em" }}>{c.name}</span>
+                <span style={{ fontSize: 18 }}>{c.flag}</span>
+                <span style={{ ...mono, fontSize: 13, color: "var(--text-2)", letterSpacing: "0.04em" }}>{c.name}</span>
               </div>
             ))}
           </div>
