@@ -159,6 +159,9 @@ export default function HomePage() {
 
       {/* ── SOCIAL PROOF: COUNTRIES MARQUEE ── */}
       <section style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "36px 0" }}>
+        <div style={{ ...mono, fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-3)", textAlign: "center", marginBottom: 20 }}>
+          Students from these countries
+        </div>
         <div className="marquee-wrap">
           <div className="marquee-track">
             {[...COUNTRIES, ...COUNTRIES].map((c, i) => (
