@@ -271,11 +271,7 @@ export default function HomePage() {
               </h2>
             </div>
             <div>
-<<<<<<< HEAD
               <p style={{ fontSize: 17, color: "var(--text-2)", lineHeight: 1.85 }}>
-=======
-              <p style={{ fontSize: 18, color: "var(--text-2)", lineHeight: 1.85 }}>
->>>>>>> 19dd013 (Update participant stats to 55/10 countries/27 cities and refresh marquee style)
                 Every month, a different challenge — stock pitches, economics quizzes, case competitions. Free to enter, open to all high school students worldwide. AI tools welcome. No finance background needed.
               </p>
             </div>
@@ -302,11 +298,7 @@ export default function HomePage() {
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, marginBottom: 10, letterSpacing: "-0.02em" }}>
                   {f.title}
                 </div>
-<<<<<<< HEAD
                 <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.75 }}>{f.body}</p>
-=======
-                <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.7 }}>{f.body}</p>
->>>>>>> 19dd013 (Update participant stats to 55/10 countries/27 cities and refresh marquee style)
               </div>
             ))}
           </div>
@@ -369,11 +361,7 @@ export default function HomePage() {
               <div key={item.title} className="grid-why-row">
                 <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.1em", paddingTop: 2 }}>{item.n}</div>
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, letterSpacing: "-0.01em", lineHeight: 1.3 }}>{item.title}</div>
-<<<<<<< HEAD
                 <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.8 }}>{item.body}</p>
-=======
-                <p style={{ fontSize: 17, color: "var(--text-2)", lineHeight: 1.75 }}>{item.body}</p>
->>>>>>> 19dd013 (Update participant stats to 55/10 countries/27 cities and refresh marquee style)
               </div>
             ))}
             <div style={{ borderTop: "1px solid var(--border)" }} />
