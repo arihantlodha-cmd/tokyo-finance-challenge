@@ -6,10 +6,10 @@ import CountdownTimer from "@/components/custom/CountdownTimer";
 
 export const metadata: Metadata = {
   title: "International Finance Challenge — Monthly Finance Competitions for High School Students",
-  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 37 participants from 7 countries. Real cash prizes.",
+  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 55 participants from 10 countries. Real cash prizes.",
   openGraph: {
     title: "International Finance Challenge",
-    description: "Free international finance competition for high school students. 37 participants from 7 countries.",
+    description: "Free international finance competition for high school students. 55 participants from 10 countries.",
   },
 };
 
@@ -32,6 +32,9 @@ const COUNTRIES = [
   { flag: "🇩🇪", name: "Germany" },
   { flag: "🇲🇾", name: "Malaysia" },
   { flag: "🇮🇩", name: "Indonesia" },
+  { flag: "🇰🇿", name: "Kazakhstan" },
+  { flag: "🇦🇪", name: "UAE" },
+  { flag: "🇲🇲", name: "Myanmar" },
 ];
 
 export default function HomePage() {
@@ -60,23 +63,25 @@ export default function HomePage() {
           </span>
         </div>
 
-        {/* Social proof line */}
-        <div style={{ display: "flex", gap: 20, flexWrap: "wrap", marginBottom: 28, alignItems: "center" }}>
-          <span style={{ ...mono, fontSize: 11, color: "var(--text-2)", letterSpacing: "0.04em" }}>
-            <span style={{ color: "#F0F0F0", fontWeight: 700 }}>37</span> participants
-          </span>
-          <span style={{ width: 1, height: 12, background: "var(--border)" }} />
-          <span style={{ ...mono, fontSize: 11, color: "var(--text-2)", letterSpacing: "0.04em" }}>
-            <span style={{ color: "#F0F0F0", fontWeight: 700 }}>7</span> countries
-          </span>
-          <span style={{ width: 1, height: 12, background: "var(--border)" }} />
-          <span style={{ ...mono, fontSize: 11, color: "var(--text-2)", letterSpacing: "0.04em" }}>
-            <span style={{ color: "#F0F0F0", fontWeight: 700 }}>17+</span> cities
-          </span>
-          <span style={{ width: 1, height: 12, background: "var(--border)" }} />
-          <span style={{ ...mono, fontSize: 11, color: "#C8102E", letterSpacing: "0.04em" }}>
-            Only {spotsLeft} spots left
-          </span>
+        {/* Big stat numbers */}
+        <div style={{ display: "flex", gap: 0, marginBottom: 36, flexWrap: "wrap" }}>
+          {[
+            { value: "55", label: "students registered" },
+            { value: "10", label: "countries" },
+            { value: "27", label: "cities worldwide" },
+          ].map((item, i) => (
+            <div key={item.label} style={{
+              padding: i === 0 ? "0 36px 0 0" : "0 36px",
+              borderLeft: i > 0 ? "1px solid var(--border)" : "none",
+            }}>
+              <div style={{ ...mono, fontSize: "clamp(36px, 6vw, 56px)", fontWeight: 700, color: "#F0F0F0", letterSpacing: "-0.04em", lineHeight: 1 }}>
+                {item.value}
+              </div>
+              <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.06em", marginTop: 6 }}>
+                {item.label}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Main headline */}
@@ -135,9 +140,9 @@ export default function HomePage() {
         {/* Stats bar */}
         <div className="grid-stats">
           {[
-            { label: "Participants",          value: "37" },
-            { label: "Countries",             value: "7" },
-            { label: "1st Prize",             value: comp.prizes.first },
+            { label: "Participants",          value: "55" },
+            { label: "Countries",             value: "10" },
+            { label: "Cities",                value: "27" },
             { label: "Reg. closes",           value: formatDate(comp.registrationClose) },
           ].map((item) => (
             <div key={item.label} className="stat-cell">
@@ -152,27 +157,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SOCIAL PROOF: COUNTRIES ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "40px 0" }}>
-        <div style={{ maxWidth: 1080, margin: "0 auto", paddingLeft: 24, marginBottom: 20 }}>
-          <div style={{ ...mono, fontSize: 11, letterSpacing: "0.12em", color: "var(--text-3)", textTransform: "uppercase" }}>
-            Participants from
-          </div>
-        </div>
+      {/* ── SOCIAL PROOF: COUNTRIES MARQUEE ── */}
+      <section style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "36px 0" }}>
         <div className="marquee-wrap">
           <div className="marquee-track">
             {[...COUNTRIES, ...COUNTRIES].map((c, i) => (
               <div key={i} style={{
-                display: "inline-flex", alignItems: "center", gap: 8,
-                padding: "7px 18px",
-                border: "1px solid var(--border)",
-                borderRadius: 2,
-                background: "var(--bg-raised)",
-                marginRight: 12,
+                display: "inline-flex", alignItems: "center",
+                padding: "0 48px",
+                borderRight: "1px solid var(--border)",
                 flexShrink: 0,
               }}>
-                <span style={{ fontSize: 18 }}>{c.flag}</span>
-                <span style={{ ...mono, fontSize: 13, color: "var(--text-2)", letterSpacing: "0.04em" }}>{c.name}</span>
+                <span style={{ ...mono, fontSize: 18, fontWeight: 600, color: "#F0F0F0", letterSpacing: "0.08em", whiteSpace: "nowrap", textTransform: "uppercase" }}>{c.name}</span>
               </div>
             ))}
           </div>
@@ -234,7 +230,7 @@ export default function HomePage() {
               {
                 num: "03",
                 title: "Submit & win",
-                body: "Submit your PDF by the deadline. Top 3 finalists present live to finance professionals. Winners receive cash prizes.",
+                body: "Submit your PDF by the deadline. Top 3 finalists present live to a panel of finance professionals.",
               },
             ].map((f, i) => (
               <div key={f.title} style={{
@@ -275,7 +271,11 @@ export default function HomePage() {
               </h2>
             </div>
             <div>
+<<<<<<< HEAD
               <p style={{ fontSize: 17, color: "var(--text-2)", lineHeight: 1.85 }}>
+=======
+              <p style={{ fontSize: 18, color: "var(--text-2)", lineHeight: 1.85 }}>
+>>>>>>> 19dd013 (Update participant stats to 55/10 countries/27 cities and refresh marquee style)
                 Every month, a different challenge — stock pitches, economics quizzes, case competitions. Free to enter, open to all high school students worldwide. AI tools welcome. No finance background needed.
               </p>
             </div>
@@ -302,7 +302,11 @@ export default function HomePage() {
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, marginBottom: 10, letterSpacing: "-0.02em" }}>
                   {f.title}
                 </div>
+<<<<<<< HEAD
                 <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.75 }}>{f.body}</p>
+=======
+                <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.7 }}>{f.body}</p>
+>>>>>>> 19dd013 (Update participant stats to 55/10 countries/27 cities and refresh marquee style)
               </div>
             ))}
           </div>
@@ -331,7 +335,7 @@ export default function HomePage() {
                   </div>
                   <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.7, marginBottom: 16 }}>{c.description}</p>
                   <div style={{ ...mono, fontSize: 11, color: "var(--text-3)" }}>
-                    Opens {formatDate(c.registrationOpen)} · {c.prizes.first} first
+                    Opens {formatDate(c.registrationOpen)}
                   </div>
                 </div>
               ))}
@@ -359,16 +363,88 @@ export default function HomePage() {
             {[
               { n: "01", title: "Real experience.", body: "Stock pitches and case work are what junior analysts actually do. This is the real thing, not a simulation." },
               { n: "02", title: "Strong uni application talking point.", body: "A finance competition is a compelling addition to any business, economics, or finance application." },
-              { n: "03", title: "Cash prizes.", body: "¥10,000 first prize. ¥5,000 second. ¥3,000 third. Real money, transferred after results." },
+              { n: "03", title: "Real experience.", body: "Build a proper investment thesis or case study — the kind of work that actually matters for finance applications." },
               { n: "04", title: "Zero barrier to entry.", body: "Free. No finance background needed. AI tools welcome. Takes as long as you want to spend on it." },
             ].map((item) => (
               <div key={item.title} className="grid-why-row">
                 <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.1em", paddingTop: 2 }}>{item.n}</div>
                 <div style={{ fontWeight: 700, color: "#F0F0F0", fontSize: 15, letterSpacing: "-0.01em", lineHeight: 1.3 }}>{item.title}</div>
+<<<<<<< HEAD
                 <p style={{ fontSize: 16, color: "var(--text-2)", lineHeight: 1.8 }}>{item.body}</p>
+=======
+                <p style={{ fontSize: 17, color: "var(--text-2)", lineHeight: 1.75 }}>{item.body}</p>
+>>>>>>> 19dd013 (Update participant stats to 55/10 countries/27 cities and refresh marquee style)
               </div>
             ))}
             <div style={{ borderTop: "1px solid var(--border)" }} />
+          </div>
+        </div>
+      </section>
+
+      {/* ── REDDIT SOCIAL PROOF ── */}
+      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 24px" }}>
+        <div style={{ maxWidth: 1080, margin: "0 auto" }}>
+          <div style={{ ...mono, fontSize: 9, letterSpacing: "0.14em", color: "var(--text-3)", textTransform: "uppercase", marginBottom: 24 }}>
+            As seen on
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {[
+              {
+                sub: "r/summerprogramresults",
+                title: "Monthly finance competitions (free alternative to expensive summer programs)",
+                url: "https://www.reddit.com/r/summerprogramresults/comments/1rubzle/monthly_finance_competitions_free_alternative_to/",
+              },
+              {
+                sub: "r/highschool",
+                title: "Free international stock pitch competition (open to all high school students)",
+                url: "https://www.reddit.com/r/highschool/comments/1ruxnij/free_international_stock_pitch_competition_10000/",
+              },
+            ].map(post => (
+              <a key={post.sub} href={post.url} target="_blank" rel="noopener noreferrer" style={{
+                display: "flex", alignItems: "center", gap: 20,
+                padding: "20px 24px",
+                border: "1px solid var(--border)",
+                borderRadius: 3,
+                background: "var(--bg-raised)",
+                textDecoration: "none",
+                transition: "border-color 0.15s",
+              }}
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
+                  <circle cx="10" cy="10" r="10" fill="#FF4500"/>
+                  <path d="M16.67 10a1.46 1.46 0 00-2.47-1 7.12 7.12 0 00-3.85-1.23l.65-3.08 2.13.45a1 1 0 101.06-1 1 1 0 00-.96.68l-2.38-.5a.17.17 0 00-.2.13l-.73 3.44a7.14 7.14 0 00-3.84 1.23 1.46 1.46 0 10-1.61 2.39 2.87 2.87 0 000 .37c0 1.88 2.19 3.41 4.89 3.41s4.89-1.53 4.89-3.41a2.87 2.87 0 000-.37 1.46 1.46 0 00.37-1zm-9.07 1.18a1 1 0 111 1 1 1 0 01-1-1zm5.55 2.64a3.45 3.45 0 01-2.4.73 3.45 3.45 0 01-2.4-.73.17.17 0 01.24-.24 3.13 3.13 0 002.16.58 3.13 3.13 0 002.16-.58.17.17 0 01.24.24zm-.11-1.64a1 1 0 111-1 1 1 0 01-1 1z" fill="white"/>
+                </svg>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ ...mono, fontSize: 11, color: "#FF6534", letterSpacing: "0.04em", marginBottom: 4 }}>{post.sub}</div>
+                  <div style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.4 }}>{post.title}</div>
+                </div>
+                <ArrowRight size={14} style={{ color: "var(--text-3)", flexShrink: 0 }} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
+      <section className="section-pad" style={{ borderTop: "1px solid var(--border)" }}>
+        <div style={{ maxWidth: 1080, margin: "0 auto" }}>
+          <SectionLabel num="05" text="From participants" />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 1, background: "var(--border)" }}>
+            {[
+              { quote: "just registered, actually so excited for this", from: "Student · Japan" },
+              { quote: "free AND judged by actual finance people?? signed up immediately", from: "Student · Germany" },
+              { quote: "glad ai tools are allowed lol makes it way less intimidating", from: "Student · India" },
+              { quote: "needed something like this for my college apps, perfect timing", from: "Student · United States" },
+              { quote: "looked at the sample pitch and it's way more doable than i thought", from: "Student · Philippines" },
+              { quote: "finally something focused on asian markets instead of just US stocks", from: "Student · Malaysia" },
+            ].map((t, i) => (
+              <div key={i} style={{ background: "var(--bg-raised)", padding: "32px 28px" }}>
+                <div style={{ ...serif, fontSize: 20, color: "var(--text-1)", lineHeight: 1.55, marginBottom: 20, fontStyle: "italic" }}>
+                  &ldquo;{t.quote}&rdquo;
+                </div>
+                <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.06em" }}>{t.from}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -43,6 +43,8 @@
     color: var(--text-1) !important;
     font-family: var(--font-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    line-height: 1.75;
   }
   html { scroll-behavior: smooth; }
   a { color: inherit; }
@@ -175,8 +177,8 @@
 .grid-why-row {
   display: grid;
   grid-template-columns: 80px 1fr 2fr;
-  gap: 32px;
-  padding: 28px 0;
+  gap: 40px;
+  padding: 36px 0;
   border-top: 1px solid var(--border);
   align-items: start;
 }
@@ -186,8 +188,8 @@
   gap: 48px;
   margin-bottom: 40px;
 }
-.section-pad { padding: 80px 24px; }
-.hero-pad    { padding: 88px 24px 72px; }
+.section-pad { padding: 96px 24px; }
+.hero-pad    { padding: 100px 24px 80px; }
 
 /* stat-cell: hide right border on last visible col */
 .stat-cell {

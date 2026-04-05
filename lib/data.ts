@@ -50,8 +50,8 @@ This is your chance to build real analytical skills, stand out in future finance
     submissionDeadline: "2026-04-30",
     resultsDate: "2026-05-05",
     prizes: { first: "¥10,000", second: "¥5,000", third: "¥3,000" },
-    participantCount: 37,
-    maxParticipants: 50,
+    participantCount: 55,
+    maxParticipants: 70,
     registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc7axySi9nBk-w8kpLOLZuwZduDYjuGY_5XJIpZhTlb_gRI9Q/viewform?usp=dialog",
     submitUrl: "https://forms.google.com/SUBMIT_APRIL_2026",
     rules: [

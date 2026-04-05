@@ -4,154 +4,172 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { competitions, pastResults, typeLabel, formatDate } from "@/lib/data";
 
-const S = {
-  label: { fontSize: 11, fontWeight: 600 as const, textTransform: "uppercase" as const, letterSpacing: "0.12em", color: "#aaa" },
-  divider: { border: "none" as const, borderTop: "1px solid rgba(0,0,0,0.07)" as const, margin: 0 },
-};
+const mono: React.CSSProperties = { fontFamily: "var(--font-mono)" };
+const serif: React.CSSProperties = { fontFamily: "var(--font-serif)" };
 
-const statusMap = {
-  open:      { label: "Open for Registration", color: "#000" },
-  active:    { label: "Active",                color: "#000" },
-  upcoming:  { label: "Upcoming",              color: "#aaa" },
-  completed: { label: "Completed",             color: "#bbb" },
-};
+const SectionLabel = ({ num, text }: { num: string; text: string }) => (
+  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 40 }}>
+    <span style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.1em" }}>{num} /</span>
+    <span style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.12em", textTransform: "uppercase" }}>{text}</span>
+    <div style={{ flex: 1, height: 1, background: "var(--border)", maxWidth: 80 }} />
+  </div>
+);
+
+const medals = ["🥇", "🥈", "🥉"];
 
 export default function ArchivePage() {
   const current = competitions.filter(c => c.status === "open" || c.status === "active");
   const upcoming = competitions.filter(c => c.status === "upcoming");
-  const medals = ["🥇", "🥈", "🥉"];
 
   return (
-    <div style={{ background: "#fff", minHeight: "100vh" }}>
-      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "64px 24px" }}>
+    <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
+      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "100px 24px 80px" }}>
 
-        <div style={{ marginBottom: 56 }}>
-          <div style={S.label}>Archive</div>
-          <h1 style={{ fontSize: "clamp(28px, 5vw, 52px)", fontWeight: 800, color: "#000", marginTop: 16, letterSpacing: "-0.03em" }}>
-            All Competitions
+        {/* Header */}
+        <div style={{ marginBottom: 72 }}>
+          <div style={{ ...mono, fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-3)", marginBottom: 28 }}>
+            Archive
+          </div>
+          <h1 style={{
+            ...serif,
+            fontSize: "clamp(48px, 9vw, 100px)",
+            fontWeight: 400,
+            color: "#F2F2F2",
+            lineHeight: 0.95,
+            letterSpacing: "-0.04em",
+          }}>
+            All competitions.
           </h1>
         </div>
 
-        {/* Current */}
+        {/* ── NOW OPEN ── */}
         {current.length > 0 && (
-          <div style={{ marginBottom: 56 }}>
-            <div style={{ ...S.label, marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#000", display: "inline-block" }} />
-              Now Open
-            </div>
+          <section style={{ marginBottom: 72 }}>
+            <SectionLabel num="01" text="Now Open" />
             {current.map(c => (
-              <div key={c.slug} style={{ border: "1px solid rgba(0,0,0,0.12)", borderRadius: 10, padding: "32px", background: "#f7f7f7", marginBottom: 12 }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 24, alignItems: "start" }}>
-                  <div>
-                    <div style={{ ...S.label, marginBottom: 10 }}>{typeLabel(c.type)}</div>
-                    <h2 style={{ fontSize: 22, fontWeight: 700, color: "#000", marginBottom: 8, letterSpacing: "-0.02em" }}>{c.title}</h2>
-                    <p style={{ color: "#aaa", fontSize: 14, lineHeight: 1.65, marginBottom: 20, maxWidth: 520 }}>{c.description}</p>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, auto)", gap: "0 32px", marginBottom: 24 }}>
-                      {[
-                        { l: "Reg closes", v: formatDate(c.registrationClose) },
-                        { l: "Deadline", v: formatDate(c.submissionDeadline) },
-                        { l: "Results", v: formatDate(c.resultsDate) },
-                        { l: "Registered", v: `${c.participantCount} / ${c.maxParticipants}` },
-                      ].map(item => (
-                        <div key={item.l}>
-                          <div style={{ ...S.label, marginBottom: 4 }}>{item.l}</div>
-                          <div style={{ color: "#888", fontSize: 13 }}>{item.v}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div style={{ display: "flex", gap: 10 }}>
-                      <a href={c.registerUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "9px 20px", fontSize: 13 }}>
-                        Register Now <ArrowRight size={13} />
-                      </a>
-                      <Link href={`/competitions/${c.slug}`} className="btn-secondary" style={{ padding: "9px 18px", fontSize: 13 }}>
-                        Full details
-                      </Link>
-                    </div>
+              <div key={c.slug} style={{
+                border: "1px solid var(--border)",
+                borderRadius: 2,
+                background: "var(--bg-raised)",
+                overflow: "hidden",
+              }}>
+                {/* Top bar */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "14px 28px", borderBottom: "1px solid var(--border)" }}>
+                  <span className="pulse" style={{ width: 5, height: 5, borderRadius: "50%", background: "#C8102E", display: "inline-block" }} />
+                  <span style={{ ...mono, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#C8102E" }}>
+                    Open for Registration
+                  </span>
+                </div>
+                <div style={{ padding: "36px 28px" }}>
+                  <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 12 }}>
+                    {typeLabel(c.type)}
                   </div>
+                  <h2 style={{
+                    ...serif,
+                    fontSize: "clamp(24px, 4vw, 44px)",
+                    fontWeight: 400,
+                    color: "#F2F2F2",
+                    letterSpacing: "-0.025em",
+                    marginBottom: 16,
+                  }}>
+                    {c.title}
+                  </h2>
+                  <p style={{ fontSize: 17, color: "var(--text-2)", lineHeight: 1.8, maxWidth: 560, marginBottom: 32 }}>
+                    {c.description}
+                  </p>
 
-                  <div style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 100 }}>
+                  {/* Dates grid */}
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 0, marginBottom: 32, borderTop: "1px solid var(--border)" }}>
                     {[
-                      { p: "1st", v: c.prizes.first },
-                      { p: "2nd", v: c.prizes.second },
-                      { p: "3rd", v: c.prizes.third },
-                    ].map(p => (
-                      <div key={p.p} style={{ textAlign: "right", padding: "6px 0" }}>
-                        <div style={{ ...S.label }}>{p.p}</div>
-                        <div style={{ color: "#777", fontWeight: 700, fontSize: 16 }}>{p.v}</div>
+                      { l: "Reg. closes", v: formatDate(c.registrationClose) },
+                      { l: "Submission", v: formatDate(c.submissionDeadline) },
+                      { l: "Results", v: formatDate(c.resultsDate) },
+                      { l: "Registered", v: `${c.participantCount} students` },
+                    ].map((item, i) => (
+                      <div key={item.l} style={{ padding: "20px 0 20px", paddingRight: 24, borderRight: i < 3 ? "1px solid var(--border)" : "none", paddingLeft: i > 0 ? 24 : 0 }}>
+                        <div style={{ ...mono, fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-3)", marginBottom: 8 }}>{item.l}</div>
+                        <div style={{ ...mono, fontSize: 14, fontWeight: 700, color: "#F2F2F2" }}>{item.v}</div>
                       </div>
                     ))}
+                  </div>
+
+                  <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                    <a href={c.registerUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 14, padding: "12px 24px" }}>
+                      Register Free <ArrowRight size={14} />
+                    </a>
+                    <Link href={`/competitions/${c.slug}`} className="btn-secondary" style={{ fontSize: 14, padding: "12px 20px" }}>
+                      Full details
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
+          </section>
         )}
 
-        <hr style={S.divider} />
-
-        {/* Upcoming */}
+        {/* ── UPCOMING ── */}
         {upcoming.length > 0 && (
-          <div style={{ marginTop: 48, marginBottom: 56 }}>
-            <div style={{ ...S.label, marginBottom: 20 }}>Upcoming</div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 1, border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, overflow: "hidden" }}>
-              {upcoming.map((c, i) => (
-                <div key={c.slug} style={{
-                  padding: "28px 24px",
-                  borderRight: i < upcoming.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none",
-                  background: "#f7f7f7",
-                }}>
-                  <div style={{ ...S.label, marginBottom: 8 }}>{typeLabel(c.type)}</div>
-                  <div style={{ color: "#000", fontWeight: 700, fontSize: 17, marginBottom: 6, letterSpacing: "-0.01em" }}>{c.title}</div>
-                  <p style={{ color: "#aaa", fontSize: 13, lineHeight: 1.6, marginBottom: 16 }}>{c.description}</p>
-                  <div style={{ ...S.label, marginBottom: 4 }}>Registration opens</div>
-                  <div style={{ color: "#999", fontSize: 13, marginBottom: 16 }}>{formatDate(c.registrationOpen)}</div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <div style={{ color: "#777", fontWeight: 700 }}>{c.prizes.first} <span style={{ color: "#ccc", fontWeight: 400, fontSize: 12 }}>1st prize</span></div>
-                    <Link href={`/competitions/${c.slug}`} style={{ color: "#bbb", fontSize: 13, textDecoration: "none" }}
-                      onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#777"; }}
-                      onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#bbb"; }}
-                    >
-                      Details →
-                    </Link>
+          <section style={{ marginBottom: 72, borderTop: "1px solid var(--border)", paddingTop: 72 }}>
+            <SectionLabel num="02" text="Upcoming" />
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 1, background: "var(--border)" }}>
+              {upcoming.map(c => (
+                <div key={c.slug} style={{ background: "var(--bg-raised)", padding: "32px 28px" }}>
+                  <div style={{ ...mono, fontSize: 10, color: "var(--text-3)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 14 }}>
+                    {typeLabel(c.type)}
                   </div>
+                  <div style={{ fontWeight: 700, color: "#F2F2F2", fontSize: 18, marginBottom: 12, letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+                    {c.title}
+                  </div>
+                  <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.7, marginBottom: 20 }}>{c.description}</p>
+                  <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", marginBottom: 16 }}>
+                    Opens {formatDate(c.registrationOpen)}
+                  </div>
+                  <Link href={`/competitions/${c.slug}`} style={{ ...mono, fontSize: 12, color: "var(--text-2)", textDecoration: "none", letterSpacing: "0.04em" }}>
+                    Details →
+                  </Link>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
         )}
 
-        <hr style={S.divider} />
-
-        {/* Past results */}
-        <div style={{ marginTop: 48 }}>
-          <div style={{ ...S.label, marginBottom: 20 }}>Past Results</div>
+        {/* ── PAST RESULTS ── */}
+        <section style={{ borderTop: "1px solid var(--border)", paddingTop: 72 }}>
+          <SectionLabel num="03" text="Past Results" />
 
           {pastResults.length === 0 ? (
-            <p style={{ color: "#bbb", fontSize: 14 }}>No results published yet.</p>
+            <p style={{ fontSize: 17, color: "var(--text-2)" }}>No results published yet.</p>
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
               {pastResults.map(r => (
-                <div key={r.slug} style={{ border: "1px solid rgba(0,0,0,0.07)", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ padding: "20px 24px", borderBottom: "1px solid rgba(0,0,0,0.07)", background: "#f7f7f7", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div key={r.slug} style={{ border: "1px solid var(--border)", borderRadius: 2, overflow: "hidden" }}>
+                  {/* Header */}
+                  <div style={{
+                    padding: "20px 28px",
+                    borderBottom: "1px solid var(--border)",
+                    background: "var(--bg-raised)",
+                    display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12,
+                  }}>
                     <div>
-                      <div style={{ ...S.label, marginBottom: 4 }}>{typeLabel(r.type)} · {formatDate(r.date)}</div>
-                      <div style={{ color: "#333", fontWeight: 600, fontSize: 16 }}>{r.competition}</div>
+                      <div style={{ ...mono, fontSize: 10, color: "var(--text-3)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 6 }}>
+                        {typeLabel(r.type)} · {formatDate(r.date)}
+                      </div>
+                      <div style={{ fontSize: 20, fontWeight: 700, color: "#F2F2F2", letterSpacing: "-0.02em" }}>{r.competition}</div>
                     </div>
-                    <span style={{ ...S.label, padding: "3px 8px", border: "1px solid rgba(0,0,0,0.08)", borderRadius: 4, color: "#ccc" }}>Completed</span>
+                    <div style={{
+                      ...mono, fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase",
+                      padding: "4px 10px", border: "1px solid var(--border)", borderRadius: 2, color: "var(--text-3)",
+                    }}>
+                      Completed
+                    </div>
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+                  {/* Winners */}
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", background: "var(--border)", gap: 1 }}>
                     {r.winners.map((w, i) => (
-                      <div key={w.rank} style={{
-                        padding: "20px 24px",
-                        borderRight: i < 2 ? "1px solid rgba(0,0,0,0.07)" : "none",
-                        background: "#fbfbfb",
-                      }}>
-                        <div style={{ marginBottom: 8, fontSize: 20 }}>{medals[i]}</div>
-                        <div style={{ color: "#444", fontWeight: 600, fontSize: 14, marginBottom: 2 }}>{w.team}</div>
-                        <div style={{ color: "#bbb", fontSize: 12, marginBottom: 6 }}>{w.school}</div>
-                        <div style={{ color: "#aaa", fontSize: 12, fontWeight: 600 }}>{w.prize}</div>
+                      <div key={w.rank} style={{ background: "var(--bg)", padding: "28px 24px" }}>
+                        <div style={{ fontSize: 24, marginBottom: 12 }}>{medals[i]}</div>
+                        <div style={{ fontWeight: 700, color: "#F2F2F2", fontSize: 16, marginBottom: 4, letterSpacing: "-0.01em" }}>{w.team}</div>
+                        <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", marginBottom: 0 }}>{w.school}</div>
                       </div>
                     ))}
                   </div>
@@ -159,7 +177,8 @@ export default function ArchivePage() {
               ))}
             </div>
           )}
-        </div>
+        </section>
+
       </div>
     </div>
   );
