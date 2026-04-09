@@ -6,10 +6,10 @@ import CountdownTimer from "@/components/custom/CountdownTimer";
 
 export const metadata: Metadata = {
   title: "International Finance Challenge — Monthly Finance Competitions for High School Students",
-  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 55 participants from 10 countries. Real cash prizes.",
+  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 75 participants from 11 countries. Real cash prizes.",
   openGraph: {
     title: "International Finance Challenge",
-    description: "Free international finance competition for high school students. 55 participants from 10 countries.",
+    description: "Free international finance competition for high school students. 75 participants from 11 countries.",
   },
 };
 
@@ -35,6 +35,7 @@ const COUNTRIES = [
   { flag: "🇰🇿", name: "Kazakhstan" },
   { flag: "🇦🇪", name: "UAE" },
   { flag: "🇲🇲", name: "Myanmar" },
+  { flag: "🇰🇷", name: "South Korea" },
 ];
 
 export default function HomePage() {
@@ -66,9 +67,9 @@ export default function HomePage() {
         {/* Big stat numbers */}
         <div style={{ display: "flex", gap: 0, marginBottom: 36, flexWrap: "wrap" }}>
           {[
-            { value: "55", label: "students registered" },
-            { value: "10", label: "countries" },
-            { value: "27", label: "cities worldwide" },
+            { value: "75", label: "students registered" },
+            { value: "11", label: "countries" },
+            { value: "38", label: "cities worldwide" },
           ].map((item, i) => (
             <div key={item.label} style={{
               padding: i === 0 ? "0 36px 0 0" : "0 36px",
@@ -140,9 +141,9 @@ export default function HomePage() {
         {/* Stats bar */}
         <div className="grid-stats">
           {[
-            { label: "Participants",          value: "55" },
-            { label: "Countries",             value: "10" },
-            { label: "Cities",                value: "27" },
+            { label: "Participants",          value: "75" },
+            { label: "Countries",             value: "11" },
+            { label: "Cities",                value: "38" },
             { label: "Reg. closes",           value: formatDate(comp.registrationClose) },
           ].map((item) => (
             <div key={item.label} className="stat-cell">
