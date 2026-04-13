@@ -116,23 +116,6 @@ export default async function CompetitionDetailPage({ params }: { params: Promis
 
           {/* Sidebar */}
           <div>
-            {/* Prizes */}
-            <div style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
-              <div style={{ padding: "14px 16px", background: "#f5f5f5", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
-                <div style={S.label}>Prizes</div>
-              </div>
-              {[
-                { p: "1st Place", v: c.prizes.first },
-                { p: "2nd Place", v: c.prizes.second },
-                { p: "3rd Place", v: c.prizes.third },
-              ].map((p, i) => (
-                <div key={p.p} style={{ padding: "14px 16px", background: "#f9f9f9", borderBottom: i < 2 ? "1px solid rgba(0,0,0,0.05)" : "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <span style={{ color: "#aaa", fontSize: 13 }}>{p.p}</span>
-                  <span style={{ color: "#555", fontWeight: 700, fontSize: 15 }}>{p.v}</span>
-                </div>
-              ))}
-            </div>
-
             {/* Judging */}
             <div style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
               <div style={{ padding: "14px 16px", background: "#f5f5f5", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>

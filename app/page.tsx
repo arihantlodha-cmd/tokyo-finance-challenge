@@ -6,10 +6,10 @@ import CountdownTimer from "@/components/custom/CountdownTimer";
 
 export const metadata: Metadata = {
   title: "International Finance Challenge — Monthly Finance Competitions for High School Students",
-  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 75 participants from 11 countries. Real cash prizes.",
+  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 100+ participants from 13 countries.",
   openGraph: {
     title: "International Finance Challenge",
-    description: "Free international finance competition for high school students. 75 participants from 11 countries.",
+    description: "Free international finance competition for high school students. 100+ participants from 13 countries.",
   },
 };
 
@@ -25,17 +25,19 @@ const SectionLabel = ({ num, text }: { num: string; text: string }) => (
 );
 
 const COUNTRIES = [
-  { flag: "🇯🇵", name: "Japan" },
-  { flag: "🇮🇳", name: "India" },
   { flag: "🇺🇸", name: "United States" },
+  { flag: "🇰🇷", name: "South Korea" },
+  { flag: "🇮🇳", name: "India" },
+  { flag: "🇯🇵", name: "Japan" },
   { flag: "🇵🇭", name: "Philippines" },
   { flag: "🇩🇪", name: "Germany" },
   { flag: "🇲🇾", name: "Malaysia" },
-  { flag: "🇮🇩", name: "Indonesia" },
   { flag: "🇰🇿", name: "Kazakhstan" },
+  { flag: "🇨🇦", name: "Canada" },
+  { flag: "🇮🇩", name: "Indonesia" },
   { flag: "🇦🇪", name: "UAE" },
   { flag: "🇲🇲", name: "Myanmar" },
-  { flag: "🇰🇷", name: "South Korea" },
+  { flag: "🇦🇺", name: "Australia" },
 ];
 
 export default function HomePage() {
@@ -67,9 +69,9 @@ export default function HomePage() {
         {/* Big stat numbers */}
         <div style={{ display: "flex", gap: 0, marginBottom: 36, flexWrap: "wrap" }}>
           {[
-            { value: "75", label: "students registered" },
-            { value: "11", label: "countries" },
-            { value: "38", label: "cities worldwide" },
+            { value: "100+", label: "students registered" },
+            { value: "13", label: "countries" },
+            { value: "42", label: "cities worldwide" },
           ].map((item, i) => (
             <div key={item.label} style={{
               padding: i === 0 ? "0 36px 0 0" : "0 36px",
@@ -141,9 +143,11 @@ export default function HomePage() {
         {/* Stats bar */}
         <div className="grid-stats">
           {[
-            { label: "Participants",          value: "75" },
-            { label: "Countries",             value: "11" },
-            { label: "Cities",                value: "38" },
+            { label: "Participants",          value: "100+" },
+            { label: "Teams",                 value: "56" },
+            { label: "Schools",               value: "46" },
+            { label: "Countries",             value: "13" },
+            { label: "Cities",                value: "42" },
             { label: "Reg. closes",           value: formatDate(comp.registrationClose) },
           ].map((item) => (
             <div key={item.label} className="stat-cell">

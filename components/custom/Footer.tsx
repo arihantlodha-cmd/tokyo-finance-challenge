@@ -21,7 +21,7 @@ export default function Footer() {
               <span style={{ fontSize: 13, fontWeight: 600, color: "#F0F0F0" }}>International Finance Challenge</span>
             </div>
             <p style={{ color: "var(--text-3)", fontSize: 13, lineHeight: 1.75, maxWidth: 280 }}>
-              Monthly finance competitions for high school students. Free to enter, real prizes.
+              Monthly finance competitions for high school students. Free to enter, judged by finance professionals.
             </p>
             <a href="mailto:arihant97@smis.ac.jp"
               style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 16, color: "var(--text-3)", fontSize: 12, textDecoration: "none", fontFamily: "var(--font-mono)", transition: "color 0.15s" }}

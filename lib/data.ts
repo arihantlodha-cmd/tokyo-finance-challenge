@@ -44,14 +44,14 @@ export const competitions: Competition[] = [
 
 Top 3 finalists will be invited to present their pitch live via Zoom to a panel of judges with real-world finance experience — including equity analysts and investment professionals.
 
-This is your chance to build real analytical skills, stand out in future finance applications, and win cash prizes. No finance background required — just curiosity, rigor, and a great argument.`,
+This is your chance to build real analytical skills and stand out in future finance applications. No finance background required — just curiosity, rigor, and a great argument.`,
     registrationOpen: "2026-03-15",
-    registrationClose: "2026-04-10",
+    registrationClose: "2026-04-20",
     submissionDeadline: "2026-04-30",
     resultsDate: "2026-05-05",
-    prizes: { first: "¥10,000", second: "¥5,000", third: "¥3,000" },
-    participantCount: 50,
-    maxParticipants: 70,
+    prizes: { first: "Certificate + Recognition", second: "Certificate + Recognition", third: "Certificate + Recognition" },
+    participantCount: 100,
+    maxParticipants: 200,
     registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc7axySi9nBk-w8kpLOLZuwZduDYjuGY_5XJIpZhTlb_gRI9Q/viewform?usp=dialog",
     submitUrl: "https://forms.google.com/SUBMIT_APRIL_2026",
     rules: [
@@ -87,14 +87,14 @@ This is your chance to build real analytical skills, stand out in future finance
       "Test your economics knowledge across microeconomics, macroeconomics, and current events. Top scorers qualify for the finals.",
     longDescription: `The May 2026 Economics Quiz Championship is a fast-paced, 40-question multiple choice exam covering micro and macroeconomics, global markets, and current financial events.
 
-Compete individually and see how your economics knowledge stacks up against students worldwide. The top 10 scorers qualify for a timed final round, with the top 3 taking home cash prizes.
+Compete individually and see how your economics knowledge stacks up against students worldwide. The top 10 scorers qualify for a timed final round, with the top 3 earning recognition and certificates.
 
 Registration opens April 15, 2026.`,
     registrationOpen: "2026-04-15",
     registrationClose: "2026-05-10",
     submissionDeadline: "2026-05-20",
     resultsDate: "2026-05-25",
-    prizes: { first: "¥8,000", second: "¥4,000", third: "¥2,000" },
+    prizes: { first: "Certificate + Recognition", second: "Certificate + Recognition", third: "Certificate + Recognition" },
     participantCount: 0,
     maxParticipants: 100,
     registerUrl: "https://forms.google.com/REGISTER_MAY_2026",
@@ -133,7 +133,7 @@ Registration opens May 20, 2026.`,
     registrationClose: "2026-06-05",
     submissionDeadline: "2026-06-20",
     resultsDate: "2026-06-28",
-    prizes: { first: "¥12,000", second: "¥6,000", third: "¥3,000" },
+    prizes: { first: "Certificate + Recognition", second: "Certificate + Recognition", third: "Certificate + Recognition" },
     participantCount: 0,
     maxParticipants: 40,
     registerUrl: "https://forms.google.com/REGISTER_JUNE_2026",
@@ -168,9 +168,9 @@ export const pastResults: PastResult[] = [
     date: "2026-03-15",
     type: "stock_pitch",
     winners: [
-      { rank: 1, team: "Alpha Investors", school: "Tokyo International School", prize: "¥10,000" },
-      { rank: 2, team: "Bull Market Bros", school: "American School in Japan (ASIJ)", prize: "¥5,000" },
-      { rank: 3, team: "Value Seekers", school: "British School in Tokyo", prize: "¥3,000" },
+      { rank: 1, team: "Alpha Investors", school: "Tokyo International School", prize: "1st Place" },
+      { rank: 2, team: "Bull Market Bros", school: "American School in Japan (ASIJ)", prize: "2nd Place" },
+      { rank: 3, team: "Value Seekers", school: "British School in Tokyo", prize: "3rd Place" },
     ],
   },
 ];

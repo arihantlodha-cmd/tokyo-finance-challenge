@@ -29,10 +29,9 @@ const categories = [
     ],
   },
   {
-    label: "Results & Prizes",
+    label: "Results",
     faqs: [
       { q: "When are results announced?", a: "Results are published on the Archive page and emailed to all participants on the date listed in the competition details." },
-      { q: "How do I claim my prize?", a: "Prize winners are contacted via the email used during registration. We'll arrange transfer details after announcing results." },
       { q: "Are there certificates?", a: "Top 3 finishers receive digital certificates of achievement. We're working on certificates for all participants." },
       { q: "Will my results be made public?", a: "Top 3 results are published on the Archive page. Full leaderboards may be published for some competitions — this is noted in the rules." },
     ],
