@@ -31,9 +31,9 @@ const categories = [
   {
     label: "Results",
     faqs: [
-      { q: "When are results announced?", a: "Results are published on the Archive page and emailed to all participants on the date listed in the competition details." },
+      { q: "When are results announced?", a: "Results are emailed to all participants on the date listed in the competition details." },
       { q: "Are there certificates?", a: "Top 3 finishers receive digital certificates of achievement. We're working on certificates for all participants." },
-      { q: "Will my results be made public?", a: "Top 3 results are published on the Archive page. Full leaderboards may be published for some competitions — this is noted in the rules." },
+      { q: "Will my results be made public?", a: "Top 3 results are announced publicly. Full leaderboards may be published for some competitions — this is noted in the rules." },
     ],
   },
   {

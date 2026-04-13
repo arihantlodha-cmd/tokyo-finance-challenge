@@ -143,11 +143,9 @@ export default function HomePage() {
         {/* Stats bar */}
         <div className="grid-stats">
           {[
-            { label: "Participants",          value: "100+" },
+            { label: "Students",              value: "100+" },
             { label: "Teams",                 value: "56" },
-            { label: "Schools",               value: "46" },
             { label: "Countries",             value: "13" },
-            { label: "Cities",                value: "42" },
             { label: "Reg. closes",           value: formatDate(comp.registrationClose) },
           ].map((item) => (
             <div key={item.label} className="stat-cell">
