@@ -33,8 +33,8 @@ export default async function CompetitionDetailPage({ params }: { params: Promis
   return (
     <div style={{ background: "#fff", minHeight: "100vh" }}>
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "48px 24px" }}>
-        <Link href="/archive" style={{ color: "#bbb", fontSize: 13, textDecoration: "none", display: "inline-block", marginBottom: 36 }}>
-          ← Archive
+        <Link href="/" style={{ color: "#bbb", fontSize: 13, textDecoration: "none", display: "inline-block", marginBottom: 36 }}>
+          ← Back
         </Link>
 
         {/* Header */}

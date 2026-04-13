@@ -34,7 +34,7 @@ export default function Footer() {
 
           <div>
             <p style={{ color: "var(--text-3)", fontSize: 10, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 20, fontFamily: "var(--font-mono)" }}>Navigate</p>
-            {[["Competition", "/"], ["Archive", "/archive"], ["About", "/about"], ["FAQ", "/faq"]].map(([label, href]) => (
+            {[["Competition", "/"], ["About", "/about"], ["FAQ", "/faq"]].map(([label, href]) => (
               <Link key={label} href={href}
                 style={{ display: "block", color: "var(--text-3)", fontSize: 13, textDecoration: "none", marginBottom: 10, transition: "color 0.15s" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#888"; }}

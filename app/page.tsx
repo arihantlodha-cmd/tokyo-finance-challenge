@@ -421,30 +421,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="section-pad" style={{ borderTop: "1px solid var(--border)" }}>
-        <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-          <SectionLabel num="05" text="From participants" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 1, background: "var(--border)" }}>
-            {[
-              { quote: "just registered, actually so excited for this", from: "Student · Japan" },
-              { quote: "free AND judged by actual finance people?? signed up immediately", from: "Student · Germany" },
-              { quote: "glad ai tools are allowed lol makes it way less intimidating", from: "Student · India" },
-              { quote: "needed something like this for my college apps, perfect timing", from: "Student · United States" },
-              { quote: "looked at the sample pitch and it's way more doable than i thought", from: "Student · Philippines" },
-              { quote: "finally something focused on asian markets instead of just US stocks", from: "Student · Malaysia" },
-            ].map((t, i) => (
-              <div key={i} style={{ background: "var(--bg-raised)", padding: "32px 28px" }}>
-                <div style={{ ...serif, fontSize: 20, color: "var(--text-1)", lineHeight: 1.55, marginBottom: 20, fontStyle: "italic" }}>
-                  &ldquo;{t.quote}&rdquo;
-                </div>
-                <div style={{ ...mono, fontSize: 11, color: "var(--text-3)", letterSpacing: "0.06em" }}>{t.from}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── BOTTOM CTA ── */}
       <section style={{ borderTop: "1px solid var(--border)", padding: "80px 24px 100px" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
@@ -477,9 +453,6 @@ export default function HomePage() {
                 Register Now — Free <ArrowRight size={15} />
               </a>
             )}
-            <Link href="/archive" className="btn-secondary" style={{ fontSize: 14, padding: "14px 28px" }}>
-              View all competitions
-            </Link>
           </div>
           <p style={{ marginTop: 24, ...mono, fontSize: 11, color: "var(--text-3)" }}>
             Questions? <a href="mailto:arihant97@smis.ac.jp" style={{ color: "var(--text-2)", textDecoration: "none" }}>arihant97@smis.ac.jp</a>

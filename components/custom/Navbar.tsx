@@ -8,7 +8,6 @@ import { competitions } from "@/lib/data";
 
 const links = [
   { href: "/", label: "Competition" },
-  { href: "/archive", label: "Archive" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
 ];

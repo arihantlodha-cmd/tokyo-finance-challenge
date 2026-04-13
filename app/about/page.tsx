@@ -12,12 +12,6 @@ const S = {
   divider: { border: "none" as const, borderTop: "1px solid rgba(0,0,0,0.07)" as const, margin: 0 },
 };
 
-const team = [
-  { name: "Arihant Lodha", role: "Founder", bio: "High school student passionate about accessible finance education and real competition." },
-  { name: "Open Position", role: "Head of Judging", bio: "We're looking for finance professionals to join the panel. Email us." },
-  { name: "Open Position", role: "Competition Operations", bio: "Help organize and run monthly competitions. Email us to get involved." },
-];
-
 const values = [
   { title: "Practical over theoretical", body: "Every competition is based on real companies, real data, and problems that matter in the real world." },
   { title: "Free, always", body: "No fees, no subscriptions, no catch. Every high school student deserves access to this kind of challenge." },
@@ -75,66 +69,15 @@ export default function AboutPage() {
 
         <hr style={S.divider} />
 
-        {/* Team */}
-        <section style={{ padding: "64px 0" }}>
-          <div style={S.label}>Team</div>
-          <h2 style={{ ...S.h2, marginTop: 16, marginBottom: 40 }}>Who runs International Finance Challenge</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 1, border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, overflow: "hidden" }}>
-            {team.map((person, i) => (
-              <div key={person.name} style={{
-                padding: "28px 24px",
-                borderRight: i < team.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none",
-                background: "#f7f7f7",
-              }}>
-                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#eee", border: "1px solid rgba(0,0,0,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16, fontSize: 16 }}>
-                  {person.name === "Open Position" ? "+" : person.name.charAt(0)}
-                </div>
-                <div style={{ color: "#222", fontWeight: 700, fontSize: 15, marginBottom: 2 }}>{person.name}</div>
-                <div style={{ color: "#bbb", fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 12 }}>{person.role}</div>
-                <p style={{ color: "#aaa", fontSize: 15, lineHeight: 1.7 }}>{person.bio}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <hr style={S.divider} />
-
-        {/* Judges */}
-        <section style={{ padding: "64px 0" }}>
-          <div style={S.label}>Judges</div>
-          <h2 style={{ ...S.h2, marginTop: 16, marginBottom: 16 }}>Competition judges</h2>
-          <p style={{ color: "#aaa", fontSize: 16, marginBottom: 32 }}>
-            Judges are finance professionals selected based on each competition type. They are announced before each competition round begins.
-          </p>
-          <div style={{ border: "1px solid rgba(0,0,0,0.07)", borderRadius: 8, padding: "24px 28px", background: "#f7f7f7" }}>
-            <p style={{ color: "#bbb", fontSize: 16, lineHeight: 1.75 }}>
-              If you are a finance professional (analyst, fund manager, consultant, or academic) interested in judging, email us at{" "}
-              <a href="mailto:arihant97@smis.ac.jp" style={{ color: "#999", textDecoration: "none" }}>arihant97@smis.ac.jp</a>.
-            </p>
-          </div>
-        </section>
-
-        <hr style={S.divider} />
-
         {/* Contact */}
         <section style={{ padding: "64px 0" }}>
           <div style={S.label}>Contact</div>
           <h2 style={{ ...S.h2, marginTop: 16, marginBottom: 32 }}>Get in touch</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, overflow: "hidden" }}>
-            <div style={{ padding: "28px 28px", background: "#f7f7f7", borderRight: "1px solid rgba(0,0,0,0.07)" }}>
-              <div style={S.label}>General enquiries</div>
-              <a href="mailto:arihant97@smis.ac.jp" style={{ display: "block", color: "#777", fontSize: 15, textDecoration: "none", marginTop: 10 }}>
-                arihant97@smis.ac.jp
-              </a>
-              <p style={{ color: "#bbb", fontSize: 15, marginTop: 8 }}>We reply within 24 hours.</p>
-            </div>
-            <div style={{ padding: "28px 28px", background: "#f7f7f7" }}>
-              <div style={S.label}>Judging &amp; partnerships</div>
-              <a href="mailto:arihant97@smis.ac.jp" style={{ display: "block", color: "#777", fontSize: 15, textDecoration: "none", marginTop: 10 }}>
-                arihant97@smis.ac.jp
-              </a>
-              <p style={{ color: "#bbb", fontSize: 15, marginTop: 8 }}>Interested in judging or partnering?</p>
-            </div>
+          <div style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: 10, padding: "28px 28px", background: "#f7f7f7" }}>
+            <a href="mailto:arihant97@smis.ac.jp" style={{ display: "block", color: "#777", fontSize: 15, textDecoration: "none", marginBottom: 6 }}>
+              arihant97@smis.ac.jp
+            </a>
+            <p style={{ color: "#bbb", fontSize: 15 }}>We reply within 24 hours.</p>
           </div>
         </section>
 
