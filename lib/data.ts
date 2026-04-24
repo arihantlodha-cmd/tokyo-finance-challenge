@@ -50,10 +50,10 @@ This is your chance to build real analytical skills and stand out in future fina
     submissionDeadline: "2026-04-30",
     resultsDate: "2026-05-05",
     prizes: { first: "Certificate + Recognition", second: "Certificate + Recognition", third: "Certificate + Recognition" },
-    participantCount: 100,
+    participantCount: 125,
     maxParticipants: 200,
     registerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc7axySi9nBk-w8kpLOLZuwZduDYjuGY_5XJIpZhTlb_gRI9Q/viewform?usp=dialog",
-    submitUrl: "https://forms.google.com/SUBMIT_APRIL_2026",
+    submitUrl: "https://docs.google.com/forms/d/e/1FAIpQLScnOG274qcmTYfSof_yE7mYBcpNek5j9zdoonIdhtuYI6GDdg/viewform?usp=dialog",
     rules: [
       "Open to all high school students (grades 9–12)",
       "Teams of 1–4 members. Solo entries fully welcome.",

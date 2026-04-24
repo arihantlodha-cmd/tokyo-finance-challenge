@@ -6,10 +6,10 @@ import CountdownTimer from "@/components/custom/CountdownTimer";
 
 export const metadata: Metadata = {
   title: "International Finance Challenge — Monthly Finance Competitions for High School Students",
-  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 100+ participants from 13 countries.",
+  description: "Free monthly stock pitch, economics quiz, and case competitions for high school students worldwide. 125+ participants from 17 countries.",
   openGraph: {
     title: "International Finance Challenge",
-    description: "Free international finance competition for high school students. 100+ participants from 13 countries.",
+    description: "Free international finance competition for high school students. 125+ participants from 17 countries.",
   },
 };
 
@@ -69,9 +69,9 @@ export default function HomePage() {
         {/* Big stat numbers */}
         <div style={{ display: "flex", gap: 0, marginBottom: 36, flexWrap: "wrap" }}>
           {[
-            { value: "100+", label: "students registered" },
-            { value: "13", label: "countries" },
-            { value: "42", label: "cities worldwide" },
+            { value: "125+", label: "students registered" },
+            { value: "17", label: "countries" },
+            { value: "56", label: "cities worldwide" },
           ].map((item, i) => (
             <div key={item.label} style={{
               padding: i === 0 ? "0 36px 0 0" : "0 36px",
@@ -119,6 +119,9 @@ export default function HomePage() {
               <a href={comp.registerUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 13 }}>
                 Register Free — 2 min <ArrowRight size={14} />
               </a>
+              <a href={comp.submitUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ fontSize: 13 }}>
+                Submit Entry <ArrowRight size={14} />
+              </a>
               <Link href="/sample" className="btn-secondary" style={{ fontSize: 13 }}>
                 See sample
               </Link>
@@ -143,9 +146,9 @@ export default function HomePage() {
         {/* Stats bar */}
         <div className="grid-stats">
           {[
-            { label: "Students",              value: "100+" },
-            { label: "Teams",                 value: "56" },
-            { label: "Countries",             value: "13" },
+            { label: "Students",              value: "125+" },
+            { label: "Cities",                value: "56" },
+            { label: "Countries",             value: "17" },
             { label: "Reg. closes",           value: formatDate(comp.registrationClose) },
           ].map((item) => (
             <div key={item.label} className="stat-cell">
@@ -447,9 +450,14 @@ export default function HomePage() {
           </h2>
           <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
             {open && (
-              <a href={open.registerUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 14, padding: "14px 32px" }}>
-                Register Now — Free <ArrowRight size={15} />
-              </a>
+              <>
+                <a href={open.registerUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 14, padding: "14px 32px" }}>
+                  Register Now — Free <ArrowRight size={15} />
+                </a>
+                <a href={open.submitUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ fontSize: 14, padding: "14px 32px" }}>
+                  Submit Entry <ArrowRight size={15} />
+                </a>
+              </>
             )}
           </div>
           <p style={{ marginTop: 24, ...mono, fontSize: 11, color: "var(--text-3)" }}>
