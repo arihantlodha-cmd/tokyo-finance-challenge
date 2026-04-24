@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, X } from "lucide-react";
 
-const REGISTER_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc7axySi9nBk-w8kpLOLZuwZduDYjuGY_5XJIpZhTlb_gRI9Q/viewform?usp=dialog";
 const SUBMIT_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLScnOG274qcmTYfSof_yE7mYBcpNek5j9zdoonIdhtuYI6GDdg/viewform?usp=dialog";
 
@@ -105,8 +103,7 @@ export default function SubmissionPopup() {
           lineHeight: 1.75, marginBottom: 28,
           fontFamily: "var(--font-mono)",
         }}>
-          Registered? Submit your stock pitch PDF before April 30.
-          Not registered yet? Sign up — it takes 2 minutes and it&apos;s free.
+          Submit your stock pitch PDF before April 30. Free to enter.
         </p>
 
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -125,24 +122,7 @@ export default function SubmissionPopup() {
               border: "1px solid #C8102E",
             }}
           >
-            Submit Entry <ArrowRight size={13} />
-          </a>
-          <a
-            href={REGISTER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={dismiss}
-            style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              padding: "12px 20px",
-              background: "none", color: "#888",
-              textDecoration: "none",
-              fontFamily: "var(--font-mono)", fontSize: 12,
-              letterSpacing: "0.04em",
-              border: "1px solid #2a2a2a",
-            }}
-          >
-            Register Free <ArrowRight size={13} />
+            Submit Here <ArrowRight size={13} />
           </a>
           <button
             onClick={dismiss}
