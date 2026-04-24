@@ -5,6 +5,7 @@ import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/custom/Navbar";
 import Footer from "@/components/custom/Footer";
+import SubmissionPopup from "@/components/custom/SubmissionPopup";
 import { Analytics } from "@vercel/analytics/next";
 
 const geist = Geist({ variable: "--font-sans", subsets: ["latin"] });
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {" "}— recently rebranded to International Finance Challenge
           </span>
         </div>
+        <SubmissionPopup />
         <Navbar />
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />
